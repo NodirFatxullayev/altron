@@ -1,0 +1,121 @@
+:root{
+    --asosiyrang: cadetblue;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    position: relative;
+    height: 100vh;
+    animation-name: scrol;
+    animation-duration: 4s;
+    animation-fill-mode: both;
+}
+@keyframes scrol{
+    0%{
+        overflow: hidden;
+        
+    }
+    25%{
+        overflow: hidden;
+        
+    }
+    50%{
+        overflow: hidden;
+        
+    }
+    75%{
+        overflow: hidden;
+        
+    }
+    100%{
+        overflow: visible;        
+    }
+}
+/* ---------------------------------loading -------------------------------*/
+.loading{
+    width: 100%;
+    height: 100vh;
+    background: var(--asosiyrang);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: loading 3s both;
+    position: absolute;
+    z-index: 3;
+}
+@keyframes loading{
+    0%{
+        display: block;
+        z-index: 3;
+    }
+    25%{
+        display: block;
+        z-index: 3;
+    }
+    50%{
+        display: block;
+        z-index: 3;
+    }
+    75%{
+        display: block;
+        z-index: 3;
+    }
+    100%{
+        display: none;
+        z-index: 1;
+    }
+}
+.loading h1{
+    margin: 5px;
+    width: 40px;
+    height: 50px;
+    border-radius: 10px;
+    animation-name: logo;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+@keyframes logo{
+    0%{
+        box-shadow: 0 0 10px black;
+        text-shadow:0 0 15px #fff;
+    }
+    25%{
+        box-shadow: 0 0 10px darkblue;
+        text-shadow:0 0 15px gray;
+    }
+    50%{
+        box-shadow: 0 0 10px black;
+        text-shadow:0 0 15px blue;
+    }
+    75%{
+        box-shadow: 0 0 10px gray;
+        text-shadow:0 0 15px darkblue;
+    }
+    100%{
+        box-shadow: 0 0 10px #fff;
+        text-shadow:0 0 15px black;
+    }
+}
+
+/* --------------------------------------------------------Container---------------------------------------- */
+.container{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
